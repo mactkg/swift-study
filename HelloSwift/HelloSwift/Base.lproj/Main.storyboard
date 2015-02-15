@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HelloSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="356" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8R-Ta-gdR">
+                                <rect key="frame" x="64" y="89" width="229" height="30"/>
+                                <state key="normal" title="Say Hello">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sayHello:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bdh-t5-hB5"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YD-UW-6s9">
+                                <rect key="frame" x="16" y="192" width="324" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7YD-UW-6s9" firstAttribute="top" secondItem="E8R-Ta-gdR" secondAttribute="bottom" constant="73" id="Gio-LC-zNn"/>
+                            <constraint firstItem="E8R-Ta-gdR" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="69" id="MUn-Dw-mA4"/>
+                            <constraint firstAttribute="centerX" secondItem="E8R-Ta-gdR" secondAttribute="centerX" id="Qpd-Rc-gB7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7YD-UW-6s9" secondAttribute="trailing" id="rGn-Bx-6JL"/>
+                            <constraint firstItem="7YD-UW-6s9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="rOi-vI-wYL"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="356" height="568"/>
+                    <connections>
+                        <outlet property="textField" destination="7YD-UW-6s9" id="kI7-Ca-ICk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="467"/>
+        </scene>
+    </scenes>
+</document>
