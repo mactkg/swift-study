@@ -25,7 +25,13 @@
                             <outlet property="delegate" destination="J7f-4a-RDD" id="YR0-J7-A3j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SwiftNews" id="khA-Nw-fMS"/>
+                    <navigationItem key="navigationItem" title="SwiftNews" id="khA-Nw-fMS">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="refresh" id="H1V-tl-uK9">
+                            <connections>
+                                <action selector="refresh:" destination="J7f-4a-RDD" id="YoU-Qi-5ZP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZO-UL-i30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
