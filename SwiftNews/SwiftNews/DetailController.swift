@@ -11,4 +11,15 @@ import UIKit
 
 class DetailController: UIViewController {
   
+  @IBOutlet weak var webView: UIWebView!
+  
+  var entry = NSDictionary()
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    var web = NSURL(string: self.entry["link"] as String)!
+    var req = NSURLRequest(URL: web)
+    webView.loadRequest(req);
+  }
 }

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--SwiftNews-->
+        <!--SwitchScience - 新商品-->
         <scene sceneID="OFB-68-Phm">
             <objects>
                 <tableViewController id="J7f-4a-RDD" customClass="ViewController" customModule="SwiftNews" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,17 +25,47 @@
                             <outlet property="delegate" destination="J7f-4a-RDD" id="YR0-J7-A3j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SwiftNews" id="khA-Nw-fMS">
+                    <navigationItem key="navigationItem" title="SwitchScience - 新商品" id="khA-Nw-fMS">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="refresh" id="H1V-tl-uK9">
                             <connections>
                                 <action selector="refresh:" destination="J7f-4a-RDD" id="YoU-Qi-5ZP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="cmU-rh-uX0" kind="show" identifier="detail" id="HhH-TW-lm5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rZO-UL-i30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1351" y="147"/>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="5gK-f6-rJk">
+            <objects>
+                <viewController id="cmU-rh-uX0" customClass="DetailController" customModule="SwiftNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pMC-zG-PO6"/>
+                        <viewControllerLayoutGuide type="bottom" id="vzb-JU-Geq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PsE-In-jcR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9b9-4N-h2E">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="9b9-4N-h2E" id="ss5-vW-kvQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcE-QJ-HCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2105" y="147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="O7f-4L-he4">
